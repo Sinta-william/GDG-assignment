@@ -1,0 +1,14 @@
+#box1{
+    border: 5px solid ;
+    width: 250px;
+    height: 200px;
+    font-size: medium;
+    background-color: lightgray;
+}
+#box2{
+    border: 5px solid ;
+    width: 250px;
+    height: 200px;
+    font-size: medium;
+    background-color: lightgray;
+}

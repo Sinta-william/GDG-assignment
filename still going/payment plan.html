@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINTECH</title>
+</head>
+
+<style>
+    body{
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: silver;
+    }
+    button{
+    font-size: x-large;
+    border-radius: 5px;
+    }
+</style>
+
+<body>
+ <input type="checkbox"  id="mycheckbox">
+ <label for="mycheckbox">subcribe</label><br><br>
+
+ <input type="radio" id="visaBtn" name="card">
+ <label for="visaBtn"> visa</label><br>
+ <input type="radio" id="mastercardBtn" name="card">
+ <label for="mastercardBtn"> mastercard</label><br>
+ <input type="radio" id="opayBtn" name="card">
+ <label for="opayBtn">opay</label><br><br>
+ 
+ <button type="submit" id="mysubmit">submit</button>
+
+ <p id="submitresult"></p>
+ <p id="paymentresult"></p>
+   
+
+<script>
+    const mycheckbox = document.getElementById("mycheckbox");
+    const visaBtn = document.getElementById("visaBtn");
+    const mastercardBtn = document.getElementById("mastercardBtn");
+    const opayBtn = document.getElementById("opayBtn");
+    const mysubmit = document.getElementById("mysubmit");
+    const submitresult = document.getElementById("submitresult");
+    const paymentresult = document.getElementById("paymentresult");
+
+  mysubmit.onclick = function(){
+
+    if(mycheckbox.checked){
+        submitresult.textContent = "you are a subcribe user.";
+    }
+    else{
+        submitresult.textContent = "you are have not subcribe.";
+    }
+
+    if(visaBtn.checked){
+        paymentresult.textContent = "you are using visa to pay.";
+    }
+    else if(mastercardBtn.checked){
+        paymentresult.textContent = "you are using mastercard to pay.";
+    }
+    else if(opayBtn.checked){
+        paymentresult.textContent = "you are using opay to pay.";
+    }
+    else{
+        paymentresult.textContent = "you have to select a payment tool.";
+    }
+  }
+
+</script>
+</body>
+</html>

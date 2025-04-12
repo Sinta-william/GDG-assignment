@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINTECH</title>
+    <link rel="stylesheet" href="scrip project.css">
+</head>
+<body>
+ <label id="mylabel"> Enter your age </label><br>
+ <input type="text" id="mytext"><br><br>
+ <button type=" submit" id="mysummit"> summit</button>
+ <p id="resultelement"></p>
+
+<style>
+    #mylabel{
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 2em;
+    }
+    #mytext{
+       text-align: center;
+       padding: 10px 20px;
+       border-radius: 5px;
+    }
+    button{
+       font-size: xx-large;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    p{
+       font-size: x-large;
+    }
+</style>
+
+<script>
+    const mytext = document.getElementById("mytext");
+    const mysummit = document.getElementById("mysummit");
+    const resultelement = document.getElementById("resultelement");
+    let age;
+
+
+mysummit.onclick = function(){
+    age = mytext.value;
+    age = Number(age);
+
+    if(age >= 100){
+       resultelement.textContent ="sorry! you are too old to enter this site";
+    }
+    else if (age == 0){
+        resultelement.textContent ="sorry you wre just born";
+    }
+    else if( age < 0){
+       resultelement.textContent ="your age cant be below 0";
+    }
+    else if (age >= 18){
+        resultelement.textContent ="you are old enought to enter this site. welcome!";
+    }
+    else{
+       resultelement.textContent ="you must be 18+ to enter this site";
+    }
+
+}
+</script>
+</body>
+</html>
